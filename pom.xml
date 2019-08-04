@@ -23,7 +23,8 @@
     <scope>test</scope>
 </dependency>
 </dependencies>
-<build>
+<build
+    <testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
 <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
