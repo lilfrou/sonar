@@ -6,6 +6,7 @@ stages {
                 script {
                     // Let's clone the source
                     git 'https://github.com/lilfrou/pipline.git';
+                    sh "mvn clean install"
                 }
             }
         }
