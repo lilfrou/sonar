@@ -6,6 +6,7 @@ stages {
                 script {
                     // Let's clone the source
                     git 'https://github.com/lilfrou/selenium.git';
+                    sh "mvn install"
                 }
             }
         }
