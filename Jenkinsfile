@@ -20,7 +20,7 @@ stages {
         }
          stage('selenium') {
             steps {
-                sh "mvn clean install"
+                sh "mvn clean test -Dtestngfile=testng.xml"
             }
         }
     }
