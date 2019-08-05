@@ -12,6 +12,7 @@ stages {
     
          stage('selenium') {
             steps {
+                sh "chmod +x -R /drivers/chromedriver/"
                 sh "mvn clean test -DsuiteXmlFile=testng.xml"
             }
         }
