@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 	@BeforeTest
 	public void setuptest(){
 		
-		System.setProperty("webdriver.chrome.driver", /var/lib/jenkins/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/chromedriver");
 		 driver = new ChromeDriver();
 		 System.out.println("testing started");
 		
