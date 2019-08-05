@@ -9,6 +9,11 @@ stages {
                 }
             }
         }
+      stage('change path') {
+           dir("selenium/drivers/chromedriver/") {
+    sh "pwd"
+}
+        }
     
          stage('selenium') {
             steps {
