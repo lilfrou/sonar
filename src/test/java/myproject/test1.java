@@ -12,7 +12,7 @@ public class test1 {
 	@BeforeTest
 	public void setuptest(){
 		
-		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/chromedriver");
 		 driver = new ChromeDriver();
 		 System.out.println("testing started");
 		
