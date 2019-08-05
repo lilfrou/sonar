@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 	@BeforeTest
 	public void setuptest(){
 		String projectpath = System.getProperty("user.dir");
-		
+		System.setProperty("webdriver.chrome.driver", projectpath+"/drivers/chromedriver/chromedriver");
 		 driver = new ChromeDriver();
 		 System.out.println("testing started");
 		
