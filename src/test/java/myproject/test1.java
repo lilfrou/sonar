@@ -11,8 +11,8 @@ public class test1 {
 	WebDriver driver= null;
 	@BeforeTest
 	public void setuptest(){
-		String projectpath = System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins");
+		
+		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/webdriver");
 		 driver = new ChromeDriver();
 		 System.out.println("testing started");
 		
