@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 	WebDriver driver= null;
 	@BeforeTest
 	public void setuptest(){
-		String projectpath = System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver", projectpath+"/drivers/chromedriver/chromedriver");
+		
+		System.setProperty("webdriver.chrome.driver", /var/lib/jenkins/chromedriver");
 		 driver = new ChromeDriver();
 		 System.out.println("testing started");
 		
