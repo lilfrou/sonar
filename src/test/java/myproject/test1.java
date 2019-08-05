@@ -17,7 +17,7 @@ public class test1 {
 		
 		System.setProperty("webdriver.gecko.driver","/var/lib/jenkins/workspace/chromedriver");
 		ChromeOptions options = new ChromeOptions();
-		options.setBinary("/usr/bin/google-chrome");
+		options.setHeadless(true);
 		
 		driver = new ChromeDriver(options);
 		
