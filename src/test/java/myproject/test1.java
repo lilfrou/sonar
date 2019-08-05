@@ -15,11 +15,11 @@ public class test1 {
 	@BeforeTest
 	public void setuptest(){
 		
-		System.setProperty("webdriver.chrome.driver","/var/lib/jenkins/workspace/chromedriver");
-		ChromeOptions options = new ChromeOptions();
+		System.setProperty("webdriver.gecko.driver","/var/lib/jenkins/workspace/geckodriver");
+		FirefoxOptions options = new FirefoxOptions();
 		options.setHeadless(true);
 		
-		driver = new ChromeDriver(options);
+		driver = new FirefoxDriver(options);
 		
 		 System.out.println("testing started");
 		
