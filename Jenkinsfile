@@ -12,7 +12,6 @@ stages {
     
          stage('selenium') {
             steps {
-                sh "dir selenium/drivers/chromedriver/"
                 sh "mvn clean test -DsuiteXmlFile=testng.xml"
             }
         }
