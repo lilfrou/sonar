@@ -15,7 +15,7 @@ public class test1 {
 	@BeforeTest
 	public void setuptest(){
 		
-		System.setProperty("webdriver.gecko.driver","/var/lib/jenkins/workspace/chromedriver");
+		System.setProperty("webdriver.chrome.driver","/var/lib/jenkins/workspace/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.setHeadless(true);
 		
