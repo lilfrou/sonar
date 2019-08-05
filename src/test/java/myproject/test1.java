@@ -12,7 +12,7 @@ public class test1 {
 	@BeforeTest
 	public void setuptest(){
 		String projectpath = System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver", projectpath+"/drivers/chromedriver/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins");
 		 driver = new ChromeDriver();
 		 System.out.println("testing started");
 		
