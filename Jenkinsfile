@@ -12,7 +12,7 @@ stages {
     
          stage('selenium') {
             steps {
-                sh "sudo mvn clean test -DsuiteXmlFile=testng.xml"
+                sh "mvn clean test -DsuiteXmlFile=testng.xml"
             }
         }
     }
