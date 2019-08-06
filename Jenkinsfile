@@ -5,7 +5,7 @@ stages {
             steps {
                 script {
                     // Let's clone the source
-                    git 'https://github.com/lilfrou/selenium.git';
+                    git 'https://github.com/lilfrou/sonar.git';
                 }
             }
         }
