@@ -22,7 +22,7 @@ stages {
       }
     stage('Publish test results') {
         steps{
-      junit '**/target/surefire-reports/testng-results.xml'
+      junit '**/target/surefire-reports/index.html'
   } 
 
     }    
