@@ -30,6 +30,7 @@ public class test1 {
 	public void thetest() {
 		driver.get("http://demo.guru99.com/test/ajax.html");
 	    List<WebElement> elements = driver.findElements(By.name("name"));
+	   
 	    System.out.println("Number of elements:" +elements.size());
 
 	    for (int i=0; i<elements.size();i++){
