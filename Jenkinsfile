@@ -12,6 +12,13 @@ stages {
     stage('compile stage') {
              steps {
               sh "mvn clean compile"
+               
+        }
+    }  
+     stage('test') {
+             steps {
+              sh "mvn test"
+               
         }
     }  
          stage('selenium') {
