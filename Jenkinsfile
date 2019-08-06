@@ -15,9 +15,9 @@ stages {
                
         }
     }  
-     stage('test') {
+     stage('test JUNIT') {
              steps {
-              sh "mvn test"
+              sh "mvn -Dtest=additiontest test"
                
         }
     }  
