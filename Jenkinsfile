@@ -17,7 +17,7 @@ stages {
     }  
      stage('sonar') {
          steps{
-    mvn sonar:sonar \
+    sh "mvn sonar:sonar" \
   -Dsonar.projectKey=lilfrou_sonar \
   -Dsonar.organization=lilfrou-github \
   -Dsonar.host.url=https://sonarcloud.io \
