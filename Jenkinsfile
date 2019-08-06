@@ -23,11 +23,14 @@ stages {
               
             }
        
-         }
+
+        }
+    stage('selenium2') {
 post {
         always {
             step([$class: 'Publisher', reportFilenamePattern: '**/target/surefire-reports/testng-results.xml'])
         }
+    }
 }    
 }
 }
