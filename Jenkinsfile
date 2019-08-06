@@ -19,12 +19,6 @@ stages {
                 sh "mvn clean test -DsuiteXmlFile=testng.xml"
               
             }   
-      }
-    stage('Publish test results') {
-        steps{
-      junit '**/target/surefire-reports/testng-results.xml'
-  } 
-
-    }    
+      }   
 }
 }
