@@ -4,8 +4,6 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -15,12 +13,10 @@ public class test1 {
 	@BeforeTest
 	public void setuptest(){
 		
-		System.setProperty("webdriver.gecko.driver","/var/lib/jenkins/workspace/geckodriver");
-		FirefoxOptions options = new FirefoxOptions();
-		options.setHeadless(true);
-		
-		driver = new FirefoxDriver(options);
-		
+		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/chromedriver");
+		ChromeOptions options = new ChromeOptions();
+		options.setBinary("/etc/alternatives/google-chrome");
+		 driver = new ChromeDriver(options);
 		 System.out.println("testing started");
 		
 		
@@ -45,5 +41,3 @@ public class test1 {
 		
 		
 	}
-
-
