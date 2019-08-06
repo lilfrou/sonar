@@ -22,5 +22,8 @@ stages {
                 sh "mvn clean test -DsuiteXmlFile=testng.xml"
             }
         }
-    }
+ stage('Publish test results') {
+      junit '**/test-output/testng-results.xml'
+  }     
+}
 }
