@@ -23,7 +23,9 @@ stages {
             }
         }
  stage('Publish test results') {
+     steps{
       junit '**/test-output/testng-results.xml'
+       }  
   }     
 }
 }
