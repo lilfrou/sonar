@@ -16,9 +16,8 @@ public class test1 {
 		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.setBinary("/etc/alternatives/google-chrome");
-		
+		options.setHeadless(true);
 		 driver = new ChromeDriver(options);
-		driver.manage().window().maximize();
 		 System.out.println("testing started");
 		
 		
