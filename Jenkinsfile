@@ -22,11 +22,5 @@ stages {
                 sh "mvn clean test -DsuiteXmlFile=testng.xml"
             }
         }
- stage('Publish test results') {
-     steps{
-     
-      ([$class: 'Publisher', reportFilenamePattern: '**/target/surefire-reports/testng-results.xml'])
-     } 
-}
     }
 }
