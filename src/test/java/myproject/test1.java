@@ -1,12 +1,15 @@
 package myproject;
 
 import org.testng.annotations.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import java.util.List;
 
 public class test1 {
 	WebDriver driver= null;
@@ -22,9 +25,17 @@ public class test1 {
 		
 		
 	}
+	
 	@Test
 	public void thetest() {
-		driver.get("https://www.seleniumhq.org/");
+		driver.get("http://demo.guru99.com/test/ajax.html");
+	    List<WebElement> elements = driver.findElements(By.name("name"));
+	    System.out.println("Number of elements:" +elements.size());
+
+	    for (int i=0; i<elements.size();i++){
+	      System.out.println("Radio button text:" + elements.get(i).getAttribute("value"));
+	    }
+		
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
