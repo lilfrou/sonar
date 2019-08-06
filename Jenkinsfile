@@ -25,7 +25,7 @@ stages {
  stage('Publish test results') {
      steps{
      
-      step([$class: 'Publisher', reportFilenamePattern: '**/target/surefire-reports/testng-results.xml'])
+      ([$class: 'Publisher', reportFilenamePattern: '**/target/surefire-reports/testng-results.xml'])
      } 
 }
     }
