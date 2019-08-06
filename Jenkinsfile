@@ -13,26 +13,18 @@ stages {
              steps {
               sh "mvn clean compile"
         }
-    }
-
-  
-    
+    }  
          stage('selenium') {
             steps {
                 sh "mvn clean test -DsuiteXmlFile=testng.xml"
               
-            }
-       
-
-        }
-    stage('selenium2') {
+            }   
+      }
+    stage('Publish test results') {
         steps{
-post {
-        always {
-            step([$class: 'Publisher', reportFilenamePattern: '**/target/surefire-reports/testng-results.xml'])
-        }
-}
-    }
-}    
+      junit '**/target/surefire-reports/testng-results.xml'
+  } 
+
+    }    
 }
 }
