@@ -24,12 +24,7 @@ stages {
   -Dsonar.login=3d3eb46dc53ffe8eeb5fa5f46eea024aa3ffe270"
      }
 }
-     stage('test JUNIT') {
-             steps {
-              sh "mvn -Dtest=additiontest test"
-               
-        }
-    }  
+ 
          stage('selenium') {
             steps {
                 sh "mvn clean test -DsuiteXmlFile=testng.xml"
