@@ -17,7 +17,7 @@ stages {
     }  
      stage('sonar') {
          steps{
-             sh "clean verify -P sonar -Dsonar.login=3d3eb46dc53ffe8eeb5fa5f46eea024aa3ffe270"
+             sh "mvn clean verify -P sonar -Dsonar.login=3d3eb46dc53ffe8eeb5fa5f46eea024aa3ffe270"
      }
 }
  
